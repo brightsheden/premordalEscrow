@@ -44,7 +44,7 @@ export const login = (email, password) => async (dispatch) => {
             payload: data
         })
 
-        //localStorage.setItem('userInfo', JSON.stringify(data))
+        localStorage.setItem('userInfo', JSON.stringify(data))
 
     } catch (error) {
         dispatch({
@@ -167,7 +167,7 @@ export const Address = (phone,address,country,city,state,postalCode,accountNumbe
             payload: data
         })
 
-        localStorage.setItem('userInfo', JSON.stringify(data))
+        //localStorage.setItem('userInfo', JSON.stringify(data))
 
     } catch (error) {
         dispatch({
