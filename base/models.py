@@ -22,7 +22,7 @@ class Transaction(models.Model):
     user = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
     amount = models.DecimalField(
         max_digits=9, decimal_places=2, null=True, blank=True)
-    chargesFee = models.DecimalField(
+    chargesFeee = models.DecimalField(
         max_digits=9, decimal_places=2, null=True, blank=True)    
     reference = models.CharField(max_length=300, blank=True,null=True)
     accountNumber = models.CharField(max_length=200, null=True, blank=True)
