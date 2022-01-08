@@ -26,7 +26,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get("DJANGO_PR_SECRETE_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 ALLOWED_HOSTS = ["localhost", "127.0.0.1", "primodialescrowservice.herokuapp.com"]
 
 
@@ -43,7 +43,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'corsheaders',
     'base.apps.BaseConfig',
-    'cloudinary_storage',
+  
 ]
 
 REST_FRAMEWORK = {
@@ -103,7 +103,7 @@ CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
     
 ]
-CORS_ALLOW_ALL_ORIGINS = True
+#CORS_ALLOW_ALL_ORIGINS = True
 
 
 
@@ -204,4 +204,5 @@ CLOUDINARY_STORAGE = {
 
 #DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
-
+if os.getcwd() == '/app':
+    DEBUG = False

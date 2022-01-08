@@ -34,7 +34,7 @@ export const login = (email, password) => async (dispatch) => {
         }
 
         const { data } = await axios.post(
-            'http://127.0.0.1:8000/api/user/login/',
+            '/api/user/login/',
             { 'username': email, 'password': password },
             config
         )
@@ -77,7 +77,7 @@ export const register = (name,email, password) => async (dispatch) => {
         }
 
         const { data } = await axios.post(
-            'http://127.0.0.1:8000/api/user/register/',
+            'api/user/register/',
             { 'name':name, 'email':email, 'password':password},
             config
         )
@@ -117,7 +117,7 @@ export const getUserDetails = (id) => async (dispatch, getState) => {
         }
 
         const { data } = await axios.get(
-            `http://127.0.0.1:8000/api/user/${id}/`
+            `api/user/${id}/`
             ,
             config
         )
@@ -157,7 +157,7 @@ export const Address = (phone,address,country,city,state,postalCode,accountNumbe
         }
 
         const { data } = await axios.post(
-            'http://127.0.0.1:8000/api/user/create/address/',
+            'api/user/create/address/',
             { phone, address, country, city, state, postalCode,accountNumber},
             config
         )
