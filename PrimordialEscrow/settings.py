@@ -23,10 +23,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "j=3*x3ci383k@qu22m9p^dw0k^hu+4e@)!o$pgni$*lh)20dvf"
+SECRET_KEY = os.environ.get("DJANGO_PR_SECRETE_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 ALLOWED_HOSTS = ["localhost", "127.0.0.1", "primodialescrowservice.herokuapp.com"]
 
 
@@ -141,7 +141,7 @@ DATABASES = {
 }
 
 #import dj_database_url
-db_from_env = dj_database_url.config(conn_max_age=500)
+db_from_env = dj_database_url.config(conn_max_age=600)
 DATABASES['default'].update(db_from_env)
 
 
