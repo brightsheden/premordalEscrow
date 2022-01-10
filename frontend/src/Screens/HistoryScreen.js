@@ -57,7 +57,7 @@ function HistoryScreen({ history }) {
                                     <tr>
                                         <th>User</th>
                                         <th>Amount</th>
-                                        <th>Charge Fees</th>
+                                       
                                         <th>Payment Type</th>
                                         <th>Account Number</th>
                                         <th>Account Name</th>
@@ -71,15 +71,57 @@ function HistoryScreen({ history }) {
                                         <tr >
                                             <td>{userInfo?.username}</td>
                                             <td>$100,000</td>
-                                            <td>$490</td>
+                                           
                                             <td>Wire Transfer</td>
                                             <td>HBUK4017264178610USD</td>
                                             <td>Helium Accounting Service</td>
                                             <td>Pending</td>
                                         </tr>
+                                        <tr >
+                                            <td>{userInfo?.username}</td>
+                                            <td>$3,000</td>
+                                         
+                                            <td>Charge Fee</td>
+                                            <td>HBUK4017264178610USD</td>
+                                            <td>Helium Accounting Service</td>
+                                            <td>SuccessFul</td>
+                                        </tr>
+
+                                        <tr >
+                                            <td>{userInfo?.username}</td>
+                                            <td>$1,140</td>
+                                         
+                                            <td>Charge Fee</td>
+                                            <td>HBUK4017264178610USD</td>
+                                            <td>Helium Accounting Service</td>
+                                            <td>SuccessFul</td>
+                                        </tr>
+
+                                        <tr >
+                                            <td>{userInfo?.username}</td>
+                                            <td>$700</td>
+                                         
+                                            <td>Charge Fee</td>
+                                            <td>HBUK4017264178610USD</td>
+                                            <td>Helium Accounting Service</td>
+                                            <td>SuccessFul</td>
+                                        </tr>
+
+                                        <tr >
+                                            <td>{userInfo?.username}</td>
+                                            <td>$490</td>
+                                         
+                                            <td>Charge Fee</td>
+                                            <td>HBUK4017264178610USD</td>
+                                            <td>Helium Accounting Service</td>
+                                            <td>SuccesFul</td>
+                                        </tr>
+                                
                                 
                                 </tbody>
                             </Table>
+
+                       
                        
             </Col>
 
